@@ -22,10 +22,53 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('repro');
   });
 
-  it('should render title', () => {
+  it('should leave a tested component behind 1', () => {
     const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.id = '1';
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('repro app is running!');
+    expect(app.title).toEqual('repro');
+  });
+
+  it('should leave a tested component behind 2', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.id = '2';
+    fixture.detectChanges();
+    expect(app.title).toEqual('repro');
+  });
+
+  it('should leave a tested component behind 3', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.id = '3';
+    fixture.detectChanges();
+    expect(app.title).toEqual('repro');
+  });
+
+  it('should leave a tested component behind 4', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.id = '4';
+    fixture.detectChanges();
+    expect(app.title).toEqual('repro');
+  });
+
+  it('should not leave a tested component behind 1', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('repro');
+  });
+
+  it('should not leave a tested component behind 2', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('repro');
+  });
+
+  it('should not leave a tested component behind 3', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('repro');
   });
 });
